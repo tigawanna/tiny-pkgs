@@ -1,5 +1,5 @@
 {
-  "name": "@denniskinutia/pkgs",
+  "name": "@denniskinutia/tiny-pkgs",
   "version": "1.0.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tigawanna/react-component-library-builder"
+    "url": "https://github.com/tigawanna/tiny-pkgs"
   },
   "keywords": [
     "React",
@@ -29,13 +29,16 @@
   "author": "tigawanna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tigawanna/react-component-library-builder"
+    "url": "https://github.com/tigawanna/tiny-pkgs"
   },
-  "homepage": "https://github.com/tigawanna/react-component-library-builder#readme",
+  "homepage": "https://github.com/tigawanna/tiny-pkgs#readme",
   "peerDependencies": {
+    "@types/react": "^16.14.14",
+    "@types/react-dom": "^16.9.14",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-     "@types/react-dom": "^16.9.14"
+    "@tanstack/react-query": "^4.20.4",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -63,6 +66,11 @@
     "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.2.4",
     "ts-jest": "^26.5.6",
+    "tslib": "^2.4.1",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.20.4",
+    "react-icons": "^4.7.1"
   }
 }

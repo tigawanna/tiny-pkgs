@@ -1,0 +1,7 @@
+
+.foo-bar {
+  color: var(--harvey-green);
+  background-color:var(--deez-nuts) ;
+  font-size: xx-large;
+  font-weight: bold;
+}
