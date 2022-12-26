@@ -6,6 +6,7 @@ import "./QueryStateWrapper.css";
 
 const QueryStateWrapper: React.FC<QueryStateWrapperProps> = (
     { children, loader,query,length }) => {
+
     if (query.isLoading) {
         return (
             <div className="w-full  flex items-center justify-center">
@@ -26,15 +27,16 @@ const QueryStateWrapper: React.FC<QueryStateWrapperProps> = (
             </div>
         );
     }
-    if (length && length < 1 ) {
-        <div className="w-full  flex items-center justify-center ">
+    if (length && length === 0 ) {
+       return ( 
+       <div className="w-full  flex items-center justify-center ">
             <div className="max-w-[90%] w-fit h-fit p-2 flex items-center justify-center 
                  text-red-700 bg-red-100 border border-red-900  text-base rounded-lg">
                 no records to show
             </div>
-        </div>
+    </div>)
     }
-    
+
     return (
     <>{children}</>
     );
