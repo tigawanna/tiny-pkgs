@@ -19,6 +19,9 @@
     "type": "git",
     "url": "https://github.com/tigawanna/tiny-pkgs"
   },
+  "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
+    },
   "keywords": [
     "React",
     "Component",
