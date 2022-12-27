@@ -10,6 +10,56 @@ import { TheIcon,LoadingElipse,QueryStateWrapper, } from '@denniskinutia/tiny-pk
 ```
 - ## LoadingElipse :
 simple loading animation
+```ts
+// Generated with util/create-component.js
+export interface LoadingElipseProps {
+  border?: string;
+  backgroundColor?:string;
+  size?:number;
+}
+
+```
+
+example usage
+```ts
+import LoadingElipse from "./LoadingElipse";
+
+export const SimpleLoadingSpinner = () => {
+    const [open, setOpen] = React.useState(true);
+    return (
+        <div className="w-full h-full  flex flex-col justify-center items-center ">
+
+       
+            <LoadingElipse size={5} border="2px solid yellow" backgroundColor="yellow"/>
+        </div>
+    );
+};
+
+```
+## LoadingSpinner
+```ts
+
+export interface LoadingSpinnerProps {
+  border?: string;
+  backgroundColor?: string;
+  size?: number;
+}
+```
+
+example usage
+```ts
+import React from "react";
+import LoadingSpinner from "./LoadingSpinner";
+
+export const SimpleLoadingSpinner:React.FC<LoadingSpinnerProps> = ({}) => {
+return (
+    <div className="w-full h-full  flex justify-center items-center ">
+       <LoadingSpinner size={5} backgroundColor="" border="15px dotted red"/>
+    </div>
+);
+}
+
+```
 
 - ## TheIcon :
 a wraps react icons with the `Icon.ContextProvider` and custom size,color , styles and click action props
@@ -105,3 +155,4 @@ export interface ReactModalWrapperProps {
   deps?: any;
 }
 ```
+

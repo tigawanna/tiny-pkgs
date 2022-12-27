@@ -14,7 +14,7 @@ export default {
 export const SimpleLoadingSpinner:React.FC<LoadingSpinnerProps> = ({}) => {
 return (
     <div className="w-full h-full  flex justify-center items-center ">
-       <LoadingSpinner />
+       <LoadingSpinner size={5} backgroundColor="" border="15px dotted red"/>
     </div>
 );
 }
