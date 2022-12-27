@@ -1,6 +1,6 @@
 {
   "name": "@denniskinuthia/tiny-pkgs",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
