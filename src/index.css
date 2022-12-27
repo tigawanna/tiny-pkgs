@@ -24,3 +24,6 @@
   }
 }
 
+.scroll-bar{
+  @apply scrollbar-thin hover:scrollbar-thumb-purple-700 scrollbar-track-gray-400
+}

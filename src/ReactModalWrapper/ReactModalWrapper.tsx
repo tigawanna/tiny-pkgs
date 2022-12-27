@@ -53,7 +53,8 @@ const ReactModalWrapper: React.FC<ReactModalWrapperProps> = (
         >
             <button
                 onClick={closeModal}
-                className='absolute top-10 right-10 hover:text-bold hover:text-red-600'>X</button>
+                className='absolute top-8 right-8 bg-red-600 hover:bg-red-900 text-slate-50 px-2'>
+                    close</button>
             <div className="h-full w-full overflow-auto scroll-bar">
                 {/* @ts-expect-error */}
                 {React.isValidElement(child) ? React.cloneElement(child, { deps, isOpen }) : child}
