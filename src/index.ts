@@ -1,8 +1,9 @@
 import './index.css'
-import TheIcon from './TheIcon';
-import QueryStateWrapper from './QueryStateWrapper';
-import LoadingElipse from './LoadingElipse';
-import ErrorBoundary from './ErrorBoundary';
-import ReactModalWrapper from './ReactModalWrapper';
+import ErrorBoundary from "./ErrorBoundary" 
+import LoadingElipse from "./LoadingElipse" 
+import QueryStateWrapper from "./QueryStateWrapper" 
+import ReactModalWrapper from "./ReactModalWrapper" 
+import TheIcon from "./TheIcon" 
 
-export { TheIcon,QueryStateWrapper,LoadingElipse,ErrorBoundary,ReactModalWrapper };
+
+export {ErrorBoundary,LoadingElipse,QueryStateWrapper,ReactModalWrapper,TheIcon,}
