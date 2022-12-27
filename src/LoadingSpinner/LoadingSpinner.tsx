@@ -10,7 +10,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = (
     <div className='flex justify-center items-center '>
         <span 
         style={styles}
-        className="loading-spinner"></span>
+        className="tiny-pkgs-loading-spinner"></span>
      </div>
 );}
 
