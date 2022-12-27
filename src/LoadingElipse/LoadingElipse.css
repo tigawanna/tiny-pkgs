@@ -1,57 +1,28 @@
-.lds-ellipsis {
- --rel-size: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: calc(var(--rel-size)* 80px);
-  height: (var(--rel-size) * 20px);
-}
-.lds-ellipsis div {
-  position: absolute;
-  top: 3px;
-  width: calc(var(--rel-size)* 13px);
-  height: calc(var(--rel-size)* 13px);
+.tiny-pkg-loader-elipse {
+   --rel-size: 1;
+  width: calc(var(--rel-size) * 16px);
+  height: calc(var(--rel-size) * 16px);
   border-radius: 50%;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  display: block;
+  margin:15px auto;
+  position: relative;
+  background: #FFF;
+  box-shadow: calc(var(--rel-size) * -24px) 0 #FFF, calc(var(--rel-size) * 24px) 0 #FFF;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
 }
-.lds-ellipsis div:nth-child(1) {
-  left: calc(var(--rel-size)* 8px);
-  animation: lds-ellipsis1 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(2) {
-  left: calc(var(--rel-size)* 8px);
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(3) {
-  left: calc(var(--rel-size)* 32px);
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(4) {
-  left: calc(var(--rel-size)* 56px);
-  animation: lds-ellipsis3 0.6s infinite;
-}
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
+
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: calc(var(--rel-size) * -24px) 0 #FF3D00, calc(var(--rel-size) * 24px) 0 #FFF;
+  }
+  66% {
+    background: #FF3D00;
+    box-shadow: calc(var(--rel-size) * -24px) 0 #FFF, calc(var(--rel-size) * 24px) 0 #FFF;
   }
   100% {
-    transform: scale(1);
-  }
-}
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(calc(var(--rel-size)* 24px), 0);
+    background: #FFF;
+    box-shadow: calc(var(--rel-size) * -24px) 0 #FFF, calc(var(--rel-size) * 24px) 0 #FF3D00;
   }
 }

@@ -1,4 +1,4 @@
-.loading-spinner {
+.tiny-pkgs-loading-spinner {
   --rel-size: 1;
   width: calc(var(--rel-size) * 48px);
   height: calc(var(--rel-size)* 48px);
