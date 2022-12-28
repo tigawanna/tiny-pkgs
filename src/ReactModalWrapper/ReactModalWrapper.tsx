@@ -47,7 +47,7 @@ const ReactModalWrapper: React.FC<ReactModalWrapperProps> = (
             // onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
             shouldCloseOnOverlayClick={true}
-
+            appElement={document.getElementById('root') as HTMLElement}
             style={customStyles}
             contentLabel="Modal"
         >
