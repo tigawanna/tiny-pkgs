@@ -7,9 +7,16 @@ export default {
     title: "${componentName}"
 };
 
-export const WithBar = () => <${componentName} foo="bar" />;
+export const Simple${componentName} = () => {
+  return (
+    <div className="h-full w-full flex items-center justify-center">
+    <${componentName}  />
+    </div>
+    );
 
-export const WithBaz = () => <${componentName} foo="baz" />;
+}
+
+
 `,
   extension: `.stories.tsx`,
 });
