@@ -7,7 +7,7 @@ import "./LoadingRipples.css";
 
 const LoadingRipples: React.FC<LoadingRipplesProps> = ({ }) => (
   <div className='w-full h-full border flex justify-center items-center '>
-        <div className="lds-ellipsis">
+        <div className="tiny-pkgs-loaing-ripples">
             <div></div>
             <div></div>
             <div></div>

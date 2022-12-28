@@ -6,6 +6,6 @@ export default {
     title: "LoadingRipples"
 };
 
-export const WithBar = () => <LoadingRipples foo="bar" />;
+export const WithBar = () => <LoadingRipples />;
 
-export const WithBaz = () => <LoadingRipples foo="baz" />;
+export const WithBaz = () => <LoadingRipples  />;
