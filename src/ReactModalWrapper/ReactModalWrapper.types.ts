@@ -1,10 +1,14 @@
 // Generated with util/create-component.js
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 export interface ReactModalWrapperProps {
   isOpen: boolean;
   closeModal: () => void;
   styles?: {
     overlay_bg_color?: string;
+    overlay_top?: string;
+    overlay_left?: string;
+    overlay_right?: string;
+    overlay_bottom?: string;
     content_top?: string;
     content_left?: string;
     content_right?: string;

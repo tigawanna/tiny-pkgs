@@ -6,7 +6,5 @@ export interface QueryStateWrapperProps {
   children: React.ReactNode;
   loader?: React.ReactNode;
   length?:number;
-  query?:
-    | UseQueryResult<void, unknown>
-    | UseInfiniteQueryResult<void, unknown>;
+  query?: | UseQueryResult<unknown, unknown> | UseInfiniteQueryResult<unknown, unknown>;
 }

@@ -2,13 +2,16 @@
 import React from "react";
 import { ReactModalWrapperProps } from "./ReactModalWrapper.types";
 import Modal from 'react-modal';
+import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { IconContext } from "react-icons/lib";
 import "./ReactModalWrapper.css";
+
 
 const ReactModalWrapper: React.FC<ReactModalWrapperProps> = (
     { isOpen, closeModal, styles, child, deps }) => {
-    const { isMobile, width } = useCheckInMobile()
-    const adjustSize = (mobile: boolean, size: string, mobile_size: string) => {
-        return mobile ? mobile_size : size
+    const { isMobile } = useCheckInMobile()
+    const adjustSize = (size: string, mobile_size: string) => {
+        return isMobile ? mobile_size : size
     }
     interface ModalStyles {
         overlay: React.CSSProperties,
@@ -18,23 +21,23 @@ const ReactModalWrapper: React.FC<ReactModalWrapperProps> = (
         overlay: {
             position: 'fixed',
             zIndex: 60,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
+            top: adjustSize(styles?.overlay_top ?? '0%', '0%'),
+            left: adjustSize(styles?.overlay_left ?? '15%', '0%'),
+            right: adjustSize(styles?.overlay_right ?? '15%', '0%'),
+            bottom: adjustSize(styles?.overlay_bottom ?? '5%', '0%'),
             backgroundColor: styles?.overlay_bg_color ?? 'rgba(255, 255, 255, 0.75)',
 
         },
         content: {
             position: 'absolute',
-            top: adjustSize(isMobile, styles?.content_top ?? '0%', '0%'),
-            left: adjustSize(isMobile, styles?.content_left ?? '15%', '0%'),
-            right: adjustSize(isMobile, styles?.content_right ?? '15%', '0%'),
-            bottom: adjustSize(isMobile, styles?.content_bottom ?? '2%', '0%'),
+            top: adjustSize(styles?.content_top ?? '0%', '0%'),
+            left: adjustSize(styles?.content_left ?? '15%', '0%'),
+            right: adjustSize(styles?.content_right ?? '15%', '0%'),
+            bottom: adjustSize(styles?.content_bottom ?? '5%', '0%'),
             overflow: 'hidden',
             WebkitOverflowScrolling: 'touch',
             border: styles?.content_border ?? '',
-            borderRadius: styles?.content_border_radius ?? '10%',
+            borderRadius: styles?.content_border_radius ?? '5%',
             outline: 'none',
             backgroundColor: styles?.content_bg_color ?? "",
 
@@ -51,10 +54,12 @@ const ReactModalWrapper: React.FC<ReactModalWrapperProps> = (
             style={customStyles}
             contentLabel="Modal"
         >
-            <button
-                onClick={closeModal}
-                className='absolute top-8 right-8 bg-red-600 hover:bg-red-900 text-slate-50 px-2'>
-                    close</button>
+            <div className="w-full flex justify-end">
+                <IconContext.Provider value={{ size: '25' }}>
+                    <AiOutlineCloseCircle onClick={closeModal} />
+                </IconContext.Provider>
+            </div>
+
             <div className="h-full w-full overflow-auto scroll-bar">
                 {/* @ts-expect-error */}
                 {React.isValidElement(child) ? React.cloneElement(child, { deps, isOpen }) : child}
@@ -63,6 +68,12 @@ const ReactModalWrapper: React.FC<ReactModalWrapperProps> = (
         </Modal>
     );
 }
+
+
+
+
+
+
 
 
 const useCheckInMobile = () => {
